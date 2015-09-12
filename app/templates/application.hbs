@@ -1,1 +1,5 @@
-{{outlet}}
+{{if session.authenticated}}
+  {{#link-to 'protected'}}Protected Page{{/link-to}}
+{{else}}
+  {{#link-to 'login'}}Login Page{{/link-to}}
+{{/if}}
